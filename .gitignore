@@ -1,0 +1,11 @@
+node_modules
+.DS_store
+*.log
+.idea
+.vagrant
+.env
+.vscode
+/lib
+dump.rdb
+.pm2/
+yarn.lock
