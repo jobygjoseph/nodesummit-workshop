@@ -22,6 +22,7 @@
   "homepage": "https://github.com/felixrieseberg/nodesummit-workshop#readme",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.22",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.22",
     "electron": "2.0.5"
   },
   "dependencies": {
@@ -29,6 +30,11 @@
   },
   "config": {
     "forge": {
+      "makers": [{
+        "name": "@electron-forge/maker-dmg",
+        "platforms": ["darwin", "linux"],
+        "config": {}
+      }],
       "packagerConfig": {
         "name": "Node Summit Editor",
         "executabelName": "nse"
