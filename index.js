@@ -20,4 +20,6 @@ app.on('ready', () => {
     createMenu()
 });
 
-
+module.exports = {
+    myWindow
+}

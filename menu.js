@@ -1,9 +1,16 @@
 const { Menu } = require('electron')
+const { openFile } = require('./files')
 
 function createMenu() {
     let template = [
-        { role: 'editMenu' },
-        { role: 'windowMenu' }
+        {
+            label: 'File',
+            submenu:[{
+                label: 'Open File',
+                accelerator: 'CmdOrCtrl+O',
+                click: openFile
+            }]
+        }
     ];
     if (process.platform === 'darwin') {
         template.unshift({
