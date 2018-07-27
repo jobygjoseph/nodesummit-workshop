@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 // const fs = require('fs')
+const { createMenu } = require('./menu')
 let myWindow;
 
 app.on('ready', () => {
@@ -15,6 +16,8 @@ app.on('ready', () => {
         
         e.sender.send('open-file', url.slice(7)) // we don't want "file://" prefix
     })
+
+    createMenu()
 });
 
 
